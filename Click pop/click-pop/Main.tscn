@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://dk0wngojm6o55"]
+
+[ext_resource type="Script" uid="uid://bn0njbnmjejf1" path="res://main.gd" id="1_glv2v"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_glv2v")
+
+[node name="Game_time" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[connection signal="timeout" from="Game_time" to="." method="_on_game_time_timeout"]
